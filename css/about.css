@@ -1,0 +1,30 @@
+.col-about {
+  height: auto;
+}
+
+.about {
+  min-height: 455px;
+}
+
+.about__container {
+  padding: 80px 60px;
+  min-height: 455px;
+  height: 455px;
+  max-width: 1720px;
+}
+
+.about__title {
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 65px;
+  color: #333;
+}
+
+.about__text {
+  max-width: 1080px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: #333;
+}

@@ -1,0 +1,185 @@
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 37px 0 38px 0;
+  max-width: 1920px;
+  min-height: 154px;
+  border: 1px solid #CACACA;
+}
+
+.contact__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 0 60px;
+  margin: 0 auto;
+  max-width: 1720px;
+  height: 100%;
+}
+
+.contact__title {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.contact__span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.contact__form {
+  padding: 0 30px;
+  max-width: 969px;
+  width: 100%;
+}
+
+.form__item {
+  position: relative;
+}
+
+.input {
+  border: none;
+  margin-right: 15px;
+  padding: 0;
+  padding-left: 24px;
+  width: 270px;
+  height: 50px;
+  border: 1px solid #333333;
+  border-radius: 100px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #999;
+}
+
+.input:hover {
+  background-color: #ECECEC;
+}
+
+.input:focus {
+  background-color: #ECECEC;
+}
+
+.input:nth-child(2) {
+  margin-right: 17px;
+}
+
+.submit {
+  padding: 0 33px;
+  width: 329px;
+  height: 50px;
+  border-radius: 100px;
+  border: none;
+  border: 2px solid #9D5CD0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #9D5CD0;
+}
+
+.submit:hover {
+  background-color: #9D5CD0;
+  color: #FFF;
+}
+
+.submit:focus {
+  border: 2px solid #9D5CD0;
+  outline: 2px solid #C283F3;;
+}
+
+.submit:active {
+  background-color: #9D5CD0;
+  color: #FFF;
+  outline: 3px solid #D1A9F0;
+}
+
+.submit--mini {
+  display: none;
+}
+
+.social {
+  margin-left: -1px;
+  height: 78px;
+}
+
+.social__title {
+  margin-bottom: 7px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.social__link {
+  cursor: pointer;
+}
+
+.whatsapp {
+  display: inline-block;
+  margin-right: 16px;
+}
+
+.telegram {
+  display: inline-block;
+}
+
+.social__link:hover {
+  opacity: 0.5;
+}
+
+.social__link:focus {
+  opacity: 0.5;
+}
+
+.whatsapp__active, .telegram__active {
+  display: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.whatsapp:active .whatsapp__img {
+  display: none;
+}
+
+.whatsapp:active .whatsapp__active {
+  display: block;
+}
+
+.telegram:active .telegram__img {
+  display: none;
+}
+
+.telegram:active .telegram__active {
+  display: block;
+}
+
+.just-validate-error-field {
+  border-color: #D11616;
+}
+
+.just-validate-error-label {
+  position: absolute;
+  top: -20px;
+  left: 15px;
+}

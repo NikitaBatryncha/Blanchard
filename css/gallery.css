@@ -1,0 +1,370 @@
+.gallery {
+  position: relative;
+  background-image: url(../img/gallery-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 595px;
+  color: #FFF;
+}
+
+.gallery__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 595px;
+  max-width: 1720px;
+  padding: 80px 60px;
+}
+
+.gallery__side--left {
+  margin-right: 50px;
+  max-width: 400px;
+  min-width: 280px;
+  width: 100%;
+  min-height: 235px;
+}
+
+.gallery__title {
+  margin-top: 1px;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 64px;
+  color: #FFF;
+}
+
+.gallery__nav-span {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFF;
+}
+
+.task {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 176px;
+  max-width: 400px;
+  min-width: 280px;
+  width: 100%;
+  height: 40px;
+  border: 1px solid #FFF;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+.choices:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#Gallery > div > div.gallery__side--left > div.task > div {
+  height: 38px;
+  padding: 5px 15px;
+  border-radius: 6px;
+}
+
+#Gallery > div > div.gallery__side--left > div.task > div > div.choices__inner {
+  padding-top: 5px;
+  background: rgba(255, 255, 255, 0);
+}
+
+#Gallery > div > div.gallery__side--left > div.task > div > div.choices__inner > div > div {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+}
+
+#Gallery > div.container.gallery__container > div.gallery__side--left > div.task > div > div.choices__inner {
+  min-height: 32px;
+}
+
+.task:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.task:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#Gallery > div.container.gallery__container > div.gallery__side--left > div.task > div > div.choices__list.choices__list--dropdown {
+  left: 0;
+  top: 39px;
+  z-index: 0;
+  max-width: 400px;
+  width: 100%;
+  height: 79px;
+  padding: 0;
+  border-radius: 6px;
+  background-color: initial;
+  border: 1px solid #999;
+}
+
+#Gallery > div.container.gallery__container > div.gallery__side--left > div.task > .choices[data-type*=select-one]::after {
+  top: 32%;
+  right: 15px;
+  content: url(../img/dropdown-arrow.svg);
+}
+
+#Gallery > div.container.gallery__container > div.gallery__side--left > div.task > .choices[data-type*=select-one].is-open::after {
+  top: 20%;
+  content: url(../img/gallery-dropdown-arrow-active.svg);
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+}
+#Gallery > div.container.gallery__container > div.gallery__side--left > div.task > div > div.choices__list.choices__list--dropdown .choices__item--selectable {
+  margin: 0;
+  height: 39px;
+}
+
+#Gallery > div.container.gallery__container > div.gallery__side--left > div.task > div > div.choices__list.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+#Gallery > div.container.gallery__container > div.gallery__side--left > div.task > div > div.choices__list.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable:nth-child(2).is-highlighted {
+  height: 40px;
+  border-top: none;
+  border-bottom: 1px solid #999;
+}
+
+#Gallery > div.container.gallery__container > div.gallery__side--left > div.task > div > div.choices__list.choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable:nth-child(3).is-highlighted {
+  border-top: 1px solid #999;
+  border-bottom: none;
+}
+
+.yearCheckbox {
+  height: 96px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: top;
+  -ms-flex-pack: top;
+}
+
+.yearCheckbox__container:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.yearCheckbox__span {
+  margin-left: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: #FFF;
+}
+
+.yearCheckbox__container {
+  display: block;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  height: 23px;
+}
+
+
+.yearCheckbox__container:hover .checkmark {
+  background-image: url(../img/checkmark-hover.svg);
+}
+
+.yearCheckbox__radio {
+  opacity: 0;
+  width: 12px;
+  height: 12px;
+}
+
+.checkmark {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background-image: url(../img/checkmark.svg);
+}
+
+.yearCheckbox__radio:focus ~ .checkmark {
+  background-image: url(../img/checkmark-hover.svg);
+}
+
+.yearCheckbox__radio:checked ~ .checkmark {
+  background-image: url(../img/checkmark-checked.svg);
+}
+
+.gallery__side--right {
+  position: relative;
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  max-width: 1150px;
+  width: 100%;
+  height: 350px;
+}
+
+.gallery__swiper {
+  margin-bottom: 3px;
+  max-width: 1150px;
+  width: 100%;
+  height: 350px;
+}
+
+.gallery__wrapper {
+  width: 100%;
+}
+
+.gallery__slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: -3px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.gallery__button {
+  position: absolute;
+  top: -39px;
+  left: 3px;
+  width: 30px;
+  height: 30px;
+  z-index: 100;
+}
+
+.gallery__button--next {
+  left: 103px;
+}
+
+.gallery__button.swiper-button-disabled {
+  top: -37px;
+  height: 29px;
+  fill: #ECECEC;
+}
+
+.gallery__button--prev.swiper-button-disabled {
+  position: absolute;
+  content: url(../img/leftArrow-disable.svg);
+}
+
+.gallery__button--next.swiper-button-disabled {
+  position: absolute;
+  content: url(../img/rightArrow-disable.svg);
+}
+
+.gallery__button--prev::after {
+  content: url(../img/leftArrow.svg);
+}
+
+.gallery__button--prev:hover::after {
+  content: url(../img/leftArrow-hover.svg);
+}
+
+.gallery__button--prev:focus::after {
+  content: url(../img/leftArrow-focus.svg);
+}
+
+.gallery__button--prev:active::after {
+  content: url(../img/leftArrow-active.svg);
+}
+
+.gallery__button--next::after {
+  content: url(../img/rightArrow.svg);
+}
+
+.gallery__button--next:hover::after {
+  content: url(../img/rightArrow-hover.svg);
+}
+
+.gallery__button--next:focus::after {
+  content: url(../img/rightArrow-focus.svg);
+}
+
+.gallery__button--next:active::after {
+  content: url(../img/rightArrow-active.svg);
+}
+
+.gallery__pagination {
+  position: absolute;
+  top: -60px;
+  left: 44px;
+  z-index: 100;
+  display: inline-block;
+  width: 47px;
+  height: 23px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: white;
+}
+
+.swiper-pagination-current, .swiper-pagination-total {
+  color: #FFF;
+}
+
+.slide__container {
+  position: relative;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 25px;
+  max-width: 350px;
+  width: 100%;
+  min-height: 315px;
+}
+
+.slide__container:focus {
+  outline: 3px solid #7943A4;
+}
+
+.slide__container:not(:last-child) {
+  margin-right: 50px;
+}
+
+.slide__container--1 {
+  background-image: url(../img/picture1.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.slide__container--2 {
+  background-image: url(../img/picture2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.slide__container--3 {
+  background-image: url(../img/picture3.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.slide__container--4 {
+  background-image: url(../img/picture4.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.slide__container--5 {
+  background-image: url(../img/picture5.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.slide__container--6 {
+  background-image: url(../img/picture6.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.slide__hover {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  opacity: 0;
+}
+
+.slide__container:hover .slide__hover {
+  opacity: 1;
+}

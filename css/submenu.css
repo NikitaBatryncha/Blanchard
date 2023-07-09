@@ -1,0 +1,591 @@
+.submenu {
+  position: absolute;
+  z-index: 1000;
+  left: 50%;
+  max-width: 1920px;
+  width: 100%;
+  height: 70px;
+  background: rgba(0, 0, 0, 0.5);
+  transform: translateX(-50%);
+}
+
+.submenu__container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+  max-width: 1720px;
+}
+
+.submenu__nav {
+  justify-content: space-between;
+  padding-top: 3px;
+  margin: 0;
+  margin-left: -7px;
+  height: 26px;
+  width: 100%;
+  max-width: 1047px;
+}
+
+.submenu__search {
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-right: 2px;
+  width: 252px;
+  height: 26px;
+}
+
+.submenu__button {
+  -ms-flex-item-align: end;
+  align-self: flex-end;
+  margin-right: 32px;
+  margin-right: -2px;
+  width: 23px;
+  height: 22px;
+  background-size: 24px;
+}
+
+.submenu__text {
+  font-size: 18px;
+  height: 27px;
+  line-height: 27px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.submenu__text:active {
+  border-color: #7943A4;
+}
+
+.submenu__row {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0;
+}
+
+.choices__inner {
+  background-color: inherit;
+  border: none;
+  padding: 0;
+}
+
+div > div.choices__inner {
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.choices__list--dropdown .choices__placeholder {
+  display: none;
+}
+
+body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__inner > div > div {
+  min-width: 89px;
+}
+
+body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__inner > div > div {
+  min-width: 159px;
+}
+
+body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__inner > div > div {
+  min-width: 198px;
+}
+
+body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__inner > div > div {
+  padding-left: 2px;
+  min-width: 101px;
+}
+
+body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__inner > div > div {
+  min-width: 101px;
+}
+
+body > section.submenu > div > ul > li > div > div.choices__inner > div > div {
+  padding-right: 15px;
+}
+
+body > section.submenu > div > ul > li:hover > div > div.choices__inner > div > div {
+  color: #9D5CD0;
+}
+
+body > section.submenu > div > ul > li:active > div > div.choices__inner > div > div {
+  color: #7943A4
+}
+
+body > section.submenu > div > ul > li > div {
+  padding: 4px 5px 2px;
+}
+
+body > section.submenu > div > ul > li > div:focus {
+  border: none;
+  outline: none;
+  background-color: #7943A4;;
+}
+
+div.choices__list.choices__list--dropdown {
+  position: absolute;
+  z-index: 10;
+  padding: 40px;
+  width: 300px;
+  height: 300px;
+  bottom: 300px;
+  border: none;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+div > div.choices__list.choices__list--dropdown.is-active {
+  top: 189%;
+}
+
+div > div.choices__inner > div > div {
+  position: relative;
+}
+
+div > div.choices__inner > div > div {
+  color: #fff;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 14px;
+  letter-spacing: 0.001em;
+}
+
+div > div.choices__inner > div {
+  padding: 0;
+}
+
+.choices[data-type*=select-one]::after {
+  position: absolute;
+  top: 19%;
+  right: 7px;
+  width: 10px;
+  border: none;
+  content: url(../img/dropdown-arrow.svg);
+}
+
+.choices[data-type*=select-one].is-open::after {
+  top: 100%;
+  margin: 0;
+  content: url(../img/dropdown-arrow.svg);
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+
+body > section.submenu > div > ul > li:hover .choices[data-type*=select-one]::after {
+  content: url(../img/submenu-arrow-hover.svg);
+}
+
+body > section.submenu > div > ul > li:hover .choices.is-focused[data-type*=select-one]::after {
+  content: url(../img/dropdown-arrow.svg);
+}
+
+body > section.submenu > div > ul > li:active .choices[data-type*=select-one]::after {
+  content: url(../img/submenu-arrow-active.svg);
+}
+
+body > section.submenu > div > ul > li > div:focus .choices__item.choices__placeholder {
+  color: #fff;
+}
+
+body > section.submenu > div > ul > li > div:focus .choices__item.choices__item--selectable {
+  color: #fff;
+}
+
+.choices__placeholder {
+  opacity: 1;
+}
+
+div > div.choices__inner {
+  min-height: 19px;
+  height: 19px;
+}
+
+.choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item {
+  margin-bottom: 20px;
+}
+
+body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__list[aria-expanded] .choices__item {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/tintoretto.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/fridrich.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/leonrdo.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/verrokkio.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/mone.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/sisley.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/mane.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/renuar.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2) {
+  outline: none;
+  border: none;
+ color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/vanGog.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/sesann.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4) {
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/gogen.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/sera.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/kandinsky.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/marinetti.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/malevich.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/picasso.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/karra.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/pratella.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/severini.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5) {
+  outline: none;
+  border: none;
+  color: #fff;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-image: url(../artists/balla.jpg);
+}
+
+/*hover*/
+body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2):hover {
+  background-image: url(../img/tintoretto-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2).is-highlighted {
+  background-image: url(../img/tintoretto-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3):hover {
+  background-image: url(../img/fridrich-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3).is-highlighted {
+  background-image: url(../img/fridrich-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4):hover {
+  background-image: url(../img/leonardo-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4).is-highlighted {
+  background-image: url(../img/leonardo-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5):hover {
+  background-image: url(../img/verrokio-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5).is-highlighted {
+  background-image: url(../img/verrokio-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2):hover {
+  background-image: url(../img/mone-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2).is-highlighted {
+  background-image: url(../img/mone-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3):hover {
+  background-image: url(../img/sisley-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3).is-highlighted {
+  background-image: url(../img/sisley-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4):hover {
+  background-image: url(../img/mane-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4).is-highlighted {
+  background-image: url(../img/mane-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5):hover {
+  background-image: url(../img/renuar-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5).is-highlighted {
+  background-image: url(../img/renuar-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2):hover {
+  background-image: url(../img/gog-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2).is-highlighted {
+  background-image: url(../img/gog-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3):hover {
+  background-image: url(../img/sesann-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3).is-highlighted {
+  background-image: url(../img/sesann-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4):hover {
+  background-image: url(../img/gogen-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4).is-highlighted {
+  background-image: url(../img/gogen-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5):hover {
+  background-image: url(../img/sera-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5).is-highlighted {
+  background-image: url(../img/sera-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2):hover {
+  background-image: url(../img/kandinsky-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2).is-highlighted {
+  background-image: url(../img/kandinsky-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3):hover {
+  background-image: url(../img/marinetti-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3).is-highlighted {
+  background-image: url(../img/marinetti-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4):hover {
+  background-image: url(../img/malevich-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4).is-highlighted {
+  background-image: url(../img/malevich-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5):hover {
+  background-image: url(../img/picasso-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5).is-highlighted {
+  background-image: url(../img/picasso-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2):hover {
+  background-image: url(../img/cara-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__list[aria-expanded] .choices__item:nth-child(2).is-highlighted {
+  background-image: url(../img/cara-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3):hover {
+  background-image: url(../img/pratella-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__list[aria-expanded] .choices__item:nth-child(3).is-highlighted {
+  background-image: url(../img/pratella-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4):hover {
+  background-image: url(../img/severinni-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__list[aria-expanded] .choices__item:nth-child(4).is-highlighted {
+  background-image: url(../img/severinni-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5):hover {
+  background-image: url(../img/balla-hover.jpg);
+}
+
+body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__list[aria-expanded] .choices__item:nth-child(5).is-highlighted {
+  background-image: url(../img/balla-hover.jpg);
+}

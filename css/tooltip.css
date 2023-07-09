@@ -1,0 +1,35 @@
+.tooltip {
+  margin-bottom: -3px;
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  background-image: url(../img/tooltip.svg);
+  cursor: pointer;
+}
+
+.tooltip:hover {
+  background-image: url(../img/tooltip__hover.svg);
+}
+
+.projects__popup {
+  position:fixed;
+  left: 50%;
+  bottom: 25px;
+  z-index: 1111;
+  padding: 8px 11px 14px;
+  width: 100%;
+  min-height: 32px;
+  background-color: rgba(0, 0, 0, 0.75);
+  transform: translateX(-50%);
+  visibility: hidden;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: center;
+  color: #FFF;
+}
+
+.visible {
+  visibility: visible;
+}

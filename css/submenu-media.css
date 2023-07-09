@@ -1,0 +1,68 @@
+@media (max-width: 1550px) {
+  .submenu__nav {
+    max-width: 830px;
+  }
+}
+
+@media (max-width: 1440px) {
+  .submenu__search {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: end;
+    width: 25px;
+    height: 25px;
+  }
+
+  .submenu__text {
+    display: none;
+  }
+
+  .submenu__button {
+    background-size: 22px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .submenu__container {
+    padding: 0 65px;
+  }
+
+  body > div.submenu > div > div > div.col-auto.col > ul {
+    max-width: 710px;
+  }
+
+  div > div.choices__inner > div > div {
+    font-size: 14px;
+  }
+
+  .choices[data-type*=select-one]::after {
+    top: 11%;
+  }
+
+  body > section.submenu > div > ul > li:nth-child(1) > div > div.choices__inner > div > div {
+    min-width: 69px;
+  }
+
+  body > section.submenu > div > ul > li:nth-child(2) > div > div.choices__inner > div > div {
+    min-width: 129px;
+  }
+
+  body > section.submenu > div > ul > li:nth-child(3) > div > div.choices__inner > div > div {
+    min-width: 158px;
+  }
+
+  body > section.submenu > div > ul > li:nth-child(4) > div > div.choices__inner > div > div {
+    padding-left: 2px;
+    min-width: 81px;
+  }
+
+  body > section.submenu > div > ul > li:nth-child(5) > div > div.choices__inner > div > div {
+    min-width: 81px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .submenu {
+    display: none;
+  }
+}
